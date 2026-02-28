@@ -1,6 +1,6 @@
 ---
 title: 'Presentación'
-slug: 'presentacion'
+slug: '/un-dev-mas/presentacion'
 description: 'Me presento, soy Oskar Torres, también conocido como Raksodiano. Un ingeniero en informática apasionado por la tecnología y el software libre.'
 pubDate: '2026-02-28'
 updatedDate: '2026-02-28'
