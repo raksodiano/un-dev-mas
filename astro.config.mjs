@@ -9,7 +9,7 @@ import partytown from "@astrojs/partytown";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://raksodiano.github.io',
-  base: '/blog',
+  base: '/un-dev-mas',
   integrations: [mdx(), sitemap(), tailwind(), partytown()],
   markdown: {
     extendDefaultPlugins: true,
