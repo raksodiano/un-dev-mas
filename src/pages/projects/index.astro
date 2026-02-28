@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectList from '../../components/ProjectList.astro';
+import { projects } from './projects';
+
+---
+
+<BaseLayout
+	title="Todos mis proyectos"
+	description="Transformando ideas en código. Aquí encontrarás desde proyectos para clientes reales hasta mis experimentos en código abierto."
+>
+  <div class='container'>
+    <div class="mb-10">
+      <h1 class="text-3xl font-bold mb-2">Todos mis proyectos</h1>
+      <p class="text-zinc-700 dark:text-zinc-300 text-lg">Transformando ideas en código. Aquí encontrarás desde proyectos para clientes reales hasta mis experimentos en código abierto.</p>
+    </div>
+    <ProjectList projects={projects}/>
+  </div>
+</BaseLayout>

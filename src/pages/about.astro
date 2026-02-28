@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Ava from '@src/assets/img/ava.jpeg';
+import Prose from '../components/Prose.astro';
+
+---
+
+<BaseLayout
+	title="Acerca de"
+	description="Ingeniero en informática apasionado por la tecnología, la automatización y el conocimiento libre."
+>
+  <div class='container'>
+		<main class='prose text-lg dark:prose-invert'>
+      <article>
+        <div class='w-full md:flex md:items-center gap-16 mb-10'>
+          <div class="text-pretty leading-9">
+            <h1 class="text-4xl font-bold mb-4">¡Hola! Soy Raksodiano 👋</h1>
+            <Prose>
+              <div class="text-lg">
+                <p>¡Qué tal! Soy ingeniero en informática y un entusiasta total de la tecnología. Me paso el día buscando formas de automatizar procesos para hacernos la vida un poquito más fácil y promoviendo el conocimiento libre. Para mí, el código abierto es la base fundamental para innovar de manera ética y transparente.</p>
+                <p>Siempre con un buen café como combustible y nuevos desafíos en el horizonte, disfruto transformando ideas complejas en realidades brillantes.</p>
+              </div>
+            </Prose>
+          </div>
+          <Image src={Ava} alt="Raksodiano" width={300}  class="rounded-3xl rotate-3 mx-4 md:mx-0"/>
+        </div>     
+        <div class="space-y-4">
+          <p>
+            Este blog personal ha sido desarrollado utilizando <strong>Astro</strong>, aprovechando su potencia para ofrecer un sitio estático extremadamente rápido y ligero, lo que me permite centrarme en lo que más me gusta: escribir y compartir conocimiento sin las fricciones de plataformas más pesadas.
+          </p>
+
+          <p>
+            Como firme defensor de la eficiencia y la soberanía tecnológica, soy un entusiasta de <strong>Emacs</strong> y su versátil <strong>org-mode</strong>, herramientas que utilizo diariamente para organizar mi flujo de trabajo y gestionar mis proyectos de manera estructurada. Además, soy un <strong>distrohopper</strong> de corazón; mi curiosidad me lleva a explorar constantemente diferentes entornos, pudiendo encontrarme un día inmerso en la elegancia minimalista de <strong>OpenBSD</strong> o en la flexibilidad de <strong>ArchLinux</strong>, y al siguiente experimentando con la compilación en <strong>Gentoo</strong> o la robustez de <strong>Fedora</strong>. Esta naturaleza nómada entre sistemas <strong>BSD</strong> y <strong>GNU/Linux</strong> alimenta mi aprendizaje continuo sobre las entrañas del software libre.
+          </p>
+
+          <p>
+            Aquí comparto ideas, proyectos, notas y aprendizajes sobre desarrollo, software libre, productividad y todo lo que voy explorando en mi día a día. A lo largo de mi trayectoria, he buscado siempre el equilibrio entre la eficiencia técnica y una experiencia de usuario fluida.
+          </p>
+
+          <p>
+            Más allá del código, cuando no estoy programando, mi creatividad se refugia en las seis cuerdas de mi guitarra 🎸, donde exploro diferentes géneros musicales. También soy un entusiasta de la preservación digital a través del disfrute de videojuegos retro 🎮; desde los clásicos de 8 y 16 bits hasta esas joyas ocultas que definieron generaciones.
+          </p>
+
+          <p>
+            Y por supuesto, nada de esto sería igual sin una taza de <strong>buen café</strong> al lado ☕. Soy un gran aficionado a explorar diferentes granos y métodos de extracción, disfrutando de ese ritual que acompaña mis mañanas (y tardes) de código y experimentación.
+          </p>
+
+          <p>
+            Puedes encontrarme en <a href="https://github.com/raksodiano" target="_blank">Github</a>.
+          </p>
+        </div>
+      </article>
+    </main>
+  </div>
+</BaseLayout>
