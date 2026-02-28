@@ -8,19 +8,19 @@ import GithubBlack from '@src/assets/img/github-mark.svg';
 
 const menu = [
   {
-		link: `${import.meta.env.BASE_URL}about/`,
+		link: `${import.meta.env.BASE_URL}/about/`,
 		label: 'Acerca'
 	},
 	{
-		link: `${import.meta.env.BASE_URL}posts/`,
+		link: `${import.meta.env.BASE_URL}/posts/`,
 		label: 'Artículos'
 	},
 	{
-		link: `${import.meta.env.BASE_URL}projects/`,
+		link: `${import.meta.env.BASE_URL}/projects/`,
 		label: 'Proyectos'
 	},
 	{
-		link: `${import.meta.env.BASE_URL}tags/`,
+		link: `${import.meta.env.BASE_URL}/tags/`,
 		label: 'Etiquetas'
 	},
 ];
@@ -49,7 +49,7 @@ const menu = [
 				<a class='p-3 hidden dark:block' href='https://github.com/raksodiano' target='_blank'>
 					<Image src={GithubWhite} width={24} height={24} alt='Github logo' />
 				</a>
-				<a class='p-3' href={`${import.meta.env.BASE_URL}rss.xml`} target='_blank' aria-label="RSS Feed">
+				<a class='p-3' href={`${import.meta.env.BASE_URL}/rss.xml`} target='_blank' aria-label="RSS Feed">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rss"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
 				</a>
 				<button class='p-3' id='themeToggle' aria-label='Theme mode'>
