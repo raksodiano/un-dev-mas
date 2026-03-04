@@ -24,6 +24,12 @@ export const projects: Project[] = [
 		tags: ['Iptv', 'App', 'Hobby']
 	},
 	{
+		name: 'Configuración de NixOS',
+		description: 'Una configuración para el sistema NixOS, lista para su uso.',
+		demoLink: 'https://github.com/raksodiano/.config-nixos',
+		tags: ['Dotfiles', 'Hobby']
+	},
+	{
 		name: 'Tienda de Instituto Pacífico',
 		description: 'Tienda de la empresa de Instituto Pacífico.',
 		demoLink: 'https://tienda.institutopacifico.pe/',
@@ -31,7 +37,7 @@ export const projects: Project[] = [
 	},
 	{
 		name: 'Einlima',
-		description: 'Tienda de la Eescuela de Investigación y Negocios de Lima.',
+		description: 'Tienda de la Escuela de Investigación y Negocios de Lima.',
 		demoLink: 'https://einlima.pe/',
 		tags: ['Ecommerce', 'Trabajo']
 	},
