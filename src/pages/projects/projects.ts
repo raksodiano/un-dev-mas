@@ -21,6 +21,7 @@ export const projects: Project[] = [
 		name: 'Neo Iptv',
 		description: 'App para ver contenido de iptv.',
 		demoLink: 'https://github.com/raksodiano/neo-iptv',
+		postLink: 'neo-iptv/',
 		tags: ['Iptv', 'App', 'Hobby']
 	},
 	{
