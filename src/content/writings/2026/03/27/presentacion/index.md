@@ -3,7 +3,9 @@ title: 'Presentación a la nueva sección'
 slug: '2026/03/27/presentacion'
 description: 'Notas, poemas, historias y demás escritos.'
 pubDate: '2026-03-27'
+updatedDate: '2026-03-27'
 tags: ['Escritos']
+coverImage: './writings-post-2026-03-27.png'
 ---
 
 ## Contexto
