@@ -13,8 +13,10 @@ import { render } from 'astro:content';
 const { GISCUS_REPO, GISCUS_REPO_ID, GISCUS_CATEGORY, GISCUS_CATEGORY_ID } = loadEnv(process.env.NODE_ENV || 'production', process.cwd(), '');
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post: any) => ({
+	const blogPosts = await getCollection('blog');
+	const writings = await getCollection('writings');
+	const allPosts = [...blogPosts, ...writings];
+	return allPosts.map((post: any) => ({
 		params: { slug: post.id },
 		props: post
 	}));

@@ -6,22 +6,11 @@ import GithubWhite from '@src/assets/img/github-mark-white.svg';
 import GithubBlack from '@src/assets/img/github-mark.svg';
 
 const menu = [
-	{
-		link: `${import.meta.env.BASE_URL}/about/`,
-		label: 'Acerca'
-	},
-	{
-		link: `${import.meta.env.BASE_URL}/posts/`,
-		label: 'Artículos'
-	},
-	{
-		link: `${import.meta.env.BASE_URL}/projects/`,
-		label: 'Proyectos'
-	},
-	{
-		link: `${import.meta.env.BASE_URL}/tags/`,
-		label: 'Etiquetas'
-	}
+	{ link: `${import.meta.env.BASE_URL}/posts/`, label: 'Artículos' },
+	{ link: `${import.meta.env.BASE_URL}/writings/`, label: 'Escritos' },
+	{ link: `${import.meta.env.BASE_URL}/projects/`, label: 'Proyectos' },
+	{ link: `${import.meta.env.BASE_URL}/tags/`, label: 'Etiquetas' },
+	{ link: `${import.meta.env.BASE_URL}/about/`, label: 'Acerca' }
 ];
 ---
 
@@ -94,8 +83,8 @@ const menu = [
 			</div>
 		</nav>
 		<div class='fixed top-3 w-auto max-w-full px-3 left-1/2 -translate-x-1/2 z-[999]'>
-			<div class='flex px-2.5 bg-white/90 dark:bg-zinc-900/75 backdrop-blur-md leading-tight rounded-full border dark:border-zinc-700'>
-				<div class='px-2.5 text-sm'>
+			<div class='navbar-pill flex px-2.5 bg-white/90 dark:bg-zinc-900/75 backdrop-blur-md leading-tight rounded-full border dark:border-zinc-700'>
+				<div class='px-1.5 text-sm'>
 					<HeaderLink class='py-3 flex items-center' href={import.meta.env.BASE_URL} aria-label='Home'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -116,7 +105,7 @@ const menu = [
 				</div>
 				{
 					menu.map((item) => (
-						<div class='px-2.5 text-sm'>
+						<div class='px-1.5 text-sm'>
 							<HeaderLink class='py-3 flex items-center' href={item.link}>
 								{item.label}
 							</HeaderLink>
@@ -136,6 +125,25 @@ const menu = [
 		}
 		.dark #themeToggle .moon {
 			display: block;
+		}
+		@media (max-width: 640px) {
+			.navbar-pill {
+				overflow-x: auto;
+				-webkit-overflow-scrolling: touch;
+				scrollbar-width: none;
+				-moz-scrollbar-width: none;
+				-ms-scrollbar-width: none;
+				scrollbar-width: none;
+				justify-content: flex-start;
+				max-width: calc(100vw - 1rem);
+			}
+			.navbar-pill::-webkit-scrollbar {
+				display: none;
+			}
+			.navbar-pill .px-1\.5 {
+				padding-left: 1rem;
+				padding-right: 0.5rem;
+			}
 		}
 	</style>
 
