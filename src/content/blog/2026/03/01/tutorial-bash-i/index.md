@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial Bash I'
-slug: 'tutorial-bash-i'
+slug: '2026/03/01/tutorial-bash-i'
 description: 'Una guía fundamental sobre Bash: desde su definición como intérprete y lenguaje de scripting hasta la gestión básica de variables y entrada/salida de datos.'
 pubDate: '2026-03-01'
 updatedDate: '2026-03-01'

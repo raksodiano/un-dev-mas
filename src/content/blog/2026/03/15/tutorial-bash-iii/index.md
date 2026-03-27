@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial Bash III: Funciones, Argumentos y Manejo de Errores'
-slug: 'tutorial-bash-iii'
+slug: '2026/03/15/tutorial-bash-iii'
 description: 'Aprende a crear funciones, manejar argumentos y controlar errores en Bash para escribir scripts robustos y reutilizables.'
 pubDate: '2026-03-15'
 tags: ['Bash', 'Linux', 'Scripting']
@@ -65,12 +65,12 @@ En Bash podemos utilizar argumentos para hacer nuestros scripts interactivos y r
 
 | Variable | Descripción                          |
 | -------- | ------------------------------------ |
-|  $0      | Nombre del script                    |
-|  $1      | Primer argumento                     |
-|  $2      | Segundo argumento                    |
-|  $#      | Número de argumentos enviados        |
-|  $*      | Todos los argumentos como una cadena |
-|  $@      | Todos los argumentos como array      |
+| $0       | Nombre del script                    |
+| $1       | Primer argumento                     |
+| $2       | Segundo argumento                    |
+| $#       | Número de argumentos enviados        |
+| $\*      | Todos los argumentos como una cadena |
+| $@       | Todos los argumentos como array      |
 
 ```bash
 #!/bin/bash

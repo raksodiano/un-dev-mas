@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial Bash II: Operadores, Condicionales y Bucles'
-slug: 'tutorial-bash-ii'
+slug: '2026/03/08/tutorial-bash-ii'
 description: 'Aprende los operadores, estructuras condicionales y bucles en Bash para crear scripts más complejos y automatizar tareas en Linux.'
 pubDate: '2026-03-08'
 tags: ['Bash', 'Linux', 'Scripting']
@@ -21,39 +21,39 @@ En Bash tenemos operadores matemáticos, de comparación y lógicos. Estos nos p
 
 Usados para realizar operaciones aritméticas básicas.
 
-| Nombre         | Operador | Ejemplo             |
-| -------------- | -------- | --------------------|
-| Suma           | +        |  echo $(( 1 + 1 ))  |
-| Resta          | -        |  echo $(( 1 - 1 ))  |
-| Multiplicación | \*       |  echo $(( 2 \* 2 )) |
-| División       | /        |  echo $(( 10 / 2 )) |
-| Módulo         | %        |  echo $(( 5 % 2 ))  |
-| Potencia       | \*\*     |  echo $(( 2 ** 3 )) |
-| Incremento     | ++       |  ((x++))            |
-| Decremento     | --       |  ((x--))            |
+| Nombre         | Operador | Ejemplo              |
+| -------------- | -------- | -------------------- |
+| Suma           | +        | echo $(( 1 + 1 ))    |
+| Resta          | -        | echo $(( 1 - 1 ))    |
+| Multiplicación | \*       | echo $(( 2 \* 2 ))   |
+| División       | /        | echo $(( 10 / 2 ))   |
+| Módulo         | %        | echo $(( 5 % 2 ))    |
+| Potencia       | \*\*     | echo $(( 2 \*\* 3 )) |
+| Incremento     | ++       | ((x++))              |
+| Decremento     | --       | ((x--))              |
 
 ### Operadores de Comparación
 
 Usados para comparar números o cadenas, comúnmente en estructuras condicionales.
 
-| Nombre        | Operador | Ejemplo             |
-| ------------- | -------- | ------------------- |
-| Igual         | -eq      |  [ "$a" -eq "$b" ]  |
-| Distinto      | -ne      |  [ "$a" -ne "$b" ]  |
-| Menor que     | -lt      |  [ "$a" -lt "$b" ]  |
-| Menor o igual | -le      |  [ "$a" -le "$b" ]  |
-| Mayor que     | -gt      |  [ "$a" -gt "$b" ]  |
-| Mayor o igual | -ge      |  [ "$a" -ge "$b" ]  |
+| Nombre        | Operador | Ejemplo           |
+| ------------- | -------- | ----------------- |
+| Igual         | -eq      | [ "$a" -eq "$b" ] |
+| Distinto      | -ne      | [ "$a" -ne "$b" ] |
+| Menor que     | -lt      | [ "$a" -lt "$b" ] |
+| Menor o igual | -le      | [ "$a" -le "$b" ] |
+| Mayor que     | -gt      | [ "$a" -gt "$b" ] |
+| Mayor o igual | -ge      | [ "$a" -ge "$b" ] |
 
 ### Operadores Lógicos
 
 Permiten combinar múltiples condiciones.
 
-| Nombre   | Operador | Ejemplo                         |
-| -------- | -------- | ------------------------------- |
-| Negación | !        |  [ ! "$a" = "$b" ]              |
-| AND      | -a       |  [ "$a" -gt 5 -a "$b" -lt 10 ]  |
-| OR       | -o       |  [ "$a" -gt 5 -o "$b" -lt 10 ]  |
+| Nombre   | Operador | Ejemplo                       |
+| -------- | -------- | ----------------------------- |
+| Negación | !        | [ ! "$a" = "$b" ]             |
+| AND      | -a       | [ "$a" -gt 5 -a "$b" -lt 10 ] |
+| OR       | -o       | [ "$a" -gt 5 -o "$b" -lt 10 ] |
 
 ## Condicionales
 

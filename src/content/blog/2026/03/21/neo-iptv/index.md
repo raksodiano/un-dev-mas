@@ -1,6 +1,6 @@
 ---
 title: 'NeoIPTV: Mi camino aprendiendo Python con un reproductor de IPTV'
-slug: 'neo-iptv'
+slug: '2026/03/21/neo-iptv'
 description: 'Cómo creé mi propio reproductor de IPTV con Python, PyQt6 y MPV, y lo que aprendí en el proceso.'
 pubDate: '2026-03-21'
 tags: ['Blog', 'Python', 'IPTV', 'Qt', 'MPV']
