@@ -1,5 +1,6 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
+import { getImage } from 'astro:assets';
 import sanitizeHtml from 'sanitize-html';
 import MarkdownIt from 'markdown-it';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
@@ -22,38 +23,41 @@ export async function GET(context) {
 			atom: 'http://www.w3.org/2005/Atom'
 		},
 		customData: `<atom:link href="${siteUrl}rss.xml" rel="self" type="application/rss+xml"/>`,
-		items: allPosts.map((post) => {
-			const contentHtml = parser.render(post.body || '');
-			const absoluteContent = contentHtml.replace(/src="\.\//g, `src="${siteUrl}`);
+		items: await Promise.all(
+			allPosts.map(async (post) => {
+				const contentHtml = parser.render(post.body || '');
+				const absoluteContent = contentHtml.replace(/src="\.\//g, `src="${siteUrl}`);
 
-			const coverImage = post.data.coverImage;
-			const coverUrl = coverImage
-				? `${siteUrl}${coverImage.src.replace(/^\//, '')}`
-						.replace(/\.png$/i, '.webp')
-						.replace(/\.jpg$/i, '.webp')
-						.replace(/\.jpeg$/i, '.webp')
-				: undefined;
+				let coverUrl;
+				if (post.data.coverImage) {
+					const optimized = await getImage({
+						src: post.data.coverImage,
+						format: 'webp'
+					});
+					coverUrl = `${siteUrl}${optimized.src.replace(/^\//, '')}`;
+				}
 
-			return {
-				title: post.data.title,
-				pubDate: post.data.pubDate,
-				description: post.data.description,
-				link: `/${post.id}/`,
-				content: sanitizeHtml(absoluteContent, {
-					allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img', 'pre', 'code']),
-					allowedAttributes: {
-						...sanitizeHtml.defaults.allowedAttributes,
-						'*': ['class', 'style']
-					}
-				}),
-				enclosure: coverUrl
-					? {
-							url: coverUrl,
-							length: 0,
-							type: 'image/jpeg'
+				return {
+					title: post.data.title,
+					pubDate: post.data.pubDate,
+					description: post.data.description,
+					link: `/${post.id}/`,
+					content: sanitizeHtml(absoluteContent, {
+						allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img', 'pre', 'code']),
+						allowedAttributes: {
+							...sanitizeHtml.defaults.allowedAttributes,
+							'*': ['class', 'style']
 						}
-					: undefined
-			};
-		})
+					}),
+					enclosure: coverUrl
+						? {
+								url: coverUrl,
+								length: 0,
+								type: 'image/jpeg'
+							}
+						: undefined
+				};
+			})
+		)
 	});
 }
